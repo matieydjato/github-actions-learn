@@ -37,7 +37,7 @@ jobs:
 
       - name: Run automated tests
         env:
-          ConnectionsStrings_DefaultConnection: Server=localhost;Database=GithubActionsLearn;User=sa; Password=Dmkroot@2023;
+          ConnectionStrings__DefaultConnection: Server=localhost;Database=GithubActionsLearn;User=sa; Password=Dmkroot@2023;
         run: dotnet test -c Release --no-build
 
       - name: Publish app
