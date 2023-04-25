@@ -17,7 +17,7 @@ namespace GithubActionsNetCoreAPI.Tests
         public async Task CustomerIntegrationTest()
         {
             // Create a DB context
-            var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").AddEnvironmentVariables().Build();
+            var configuration = new ConfigurationBuilder().AddJsonFile("appsettings-tests.json").AddEnvironmentVariables().Build();
             var optionsBuilder = new DbContextOptionsBuilder<CustomerContext>();
             optionsBuilder.UseSqlServer(configuration["ConnectionStrings:DefaultConnection"]);
             var context =  new CustomerContext(optionsBuilder.Options);
